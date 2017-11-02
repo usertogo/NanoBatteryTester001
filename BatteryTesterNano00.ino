@@ -3,8 +3,9 @@
   Used Analog input, serial output
 
  Reads an analog input pin, representing the voltage of the cell
- Callibrates current, the tests wit two types of load 
+ Callibrates current, the tests with two types of load 
  measures voltage and current each time and estimates internal resistance of the battery 
+ uses repeated measurement and calculates a standard deviation in order to know the quality of results
  
  prints the test results to the serial monitor.
 
@@ -71,7 +72,7 @@ float openVdeviation, currentDeviation, loadedVdeviation; //helps to see where t
 void setup() {
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);
-  Serial.println("\t Welcome to the Battery Evaluator 0.1" );
+  Serial.println("\t Welcome to the Battery Evaluator 0.101" );
   // setup all IO
   pinMode(aNanoLED, OUTPUT);
   pinMode(aLoadPin, OUTPUT);
